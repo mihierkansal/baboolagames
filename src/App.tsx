@@ -67,7 +67,7 @@ function App() {
     { text: "Snake", value: Game.Snake, type: GameType.Digital },
   ];
 
-  const selectedGame = createSignal<Game | undefined>(Game.FlappyBird);
+  const selectedGame = createSignal<Game | undefined>(Game.TicTacToe);
 
   const windowWidth = createSignal(window.innerWidth);
   window.addEventListener("resize", () => {
