@@ -143,25 +143,6 @@ body {
   border-radius: 1rem;
 }
 
-.modal {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  background: linear-gradient(to bottom, #fff, #ccc);
-  padding: 1rem;
-  color: black;
-  border-radius: 1.5rem;
-  z-index: 999;
-  display: flex;
-  width: max-content;
-  flex-direction: column;
-  gap: 0.5rem;
-  box-shadow: inset 0 4px 2px #fff, inset 0 0 9px #0004, 0 0 0 1000px #444a;
-  & button {
-    width: 100%;
-  }
-}
 .die {
   height: 4rem;
   width: 4rem;
