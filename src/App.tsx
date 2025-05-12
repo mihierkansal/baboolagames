@@ -20,6 +20,8 @@ import {
   createSortable,
 } from "@thisbeyond/solid-dnd";
 
+import "baboolastyles/public/plastic.css";
+
 type dievalue = 1 | 2 | 3 | 4 | 5 | 6;
 
 enum GameType {
