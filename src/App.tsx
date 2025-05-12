@@ -308,12 +308,12 @@ function WordScramble() {
         }}
       >
         <Show when={won[0]()}>
-          <div class="win-msg">
+          <div class="modal">
             That's correct! Word: {word.word.toUpperCase()}
           </div>
         </Show>
         <Show when={lost[0]()}>
-          <div class="win-msg">Time's up. Word: {word.word.toUpperCase()} </div>
+          <div class="modal">Time's up. Word: {word.word.toUpperCase()} </div>
         </Show>
         <SortableList
           onReorder={(newOrder) => {
@@ -638,10 +638,10 @@ function Hangman() {
       <h3>Hangman</h3>
       <div class="hangman-paper">
         <Show when={won()}>
-          <div class="win-msg">You win!</div>
+          <div class="modal">You win!</div>
         </Show>
         <Show when={lost()}>
-          <div class="win-msg">You lose.</div>
+          <div class="modal">You lose.</div>
         </Show>
         <img src={`/hangman-${wrongGuesses()}.svg`} alt="" />
         <div>
@@ -777,7 +777,7 @@ function BallJump() {
       <p>Press ENTER to start game. Press SPACE to make the ball jump</p>
       <div class="ball-jump-container">
         <Show when={gameOver[0]()}>
-          <div class="win-msg">Game over. Score: {score[0]()}</div>
+          <div class="modal">Game over. Score: {score[0]()}</div>
         </Show>
         <div class="score">{score[0]()}</div>
         <div class="ball-jump-display">
@@ -901,7 +901,7 @@ function Snake() {
       <div class="snake-container">
         <div id="snake-board"></div>
         <Show when={gameOver[0]()}>
-          <div class="win-msg">Game over!</div>
+          <div class="modal">Game over!</div>
         </Show>
       </div>
     </>
@@ -971,13 +971,13 @@ function TicTacToe() {
         <Show when={winner()}>
           <Switch>
             <Match when={winner() === "draw"}>
-              <div class="win-msg">It's a draw!</div>
+              <div class="modal">It's a draw!</div>
             </Match>
             <Match when={winner() === "✕"}>
-              <div class="win-msg">X wins!</div>
+              <div class="modal">X wins!</div>
             </Match>
             <Match when={winner() === "○"}>
-              <div class="win-msg">O wins!</div>
+              <div class="modal">O wins!</div>
             </Match>
           </Switch>
         </Show>
@@ -1079,7 +1079,7 @@ function SpinnerWheel() {
       <h3>Spinner Wheel</h3>
       <div class="spinner-container">
         <Show when={winner[0]() !== undefined}>
-          <div class="win-msg">
+          <div class="modal">
             We have a winner: {items[0]()[winner[0]()!]}
             <button
               onClick={() => {
@@ -1283,10 +1283,10 @@ function SnakesAndLadders() {
       <div class="snakes-ladders-game-container">
         <div class="snakes-ladders-board-container">
           <Show when={humanPawnPos[0]() === 100}>
-            <div class="win-msg">You win!</div>
+            <div class="modal">You win!</div>
           </Show>
           <Show when={computerPawnPos[0]() === 100}>
-            <div class="win-msg">Computer wins!</div>
+            <div class="modal">Computer wins!</div>
           </Show>
           <div class="snakes-ladders-board">
             <For each={cells}>
